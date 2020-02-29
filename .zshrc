@@ -1,3 +1,7 @@
+# 補完機能
+autoload -U compinit
+compinit
+
 # 他のターミナルとヒストリーを共有
 setopt share_history
 
@@ -11,6 +15,7 @@ SAVEHIST=10000
 # cdコマンドを省略して、ディレクトリ名のみの入力で移動
 setopt auto_cd
 
+# マシン名とカレントディレクトリに色をつける
 autoload colors
 colors
 PROMPT="%{[38;5;245m%}%m%(!.#.$) %{$reset_color%}%{$fg[cyan]%}%~ %{$reset_color%}"
